@@ -1,0 +1,22 @@
+.header {
+    background-color: #fff;
+    color: #000000;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    height: 50px;
+}
+
+.header-logo {
+    float: right;
+    margin-right: 140px;
+}
+
+.header-list li {
+    float: right;
+    list-style: none;
+    padding-top: 20px;
+    margin-right: 140px;
+}
+
+.welcome-message {
+    display: flex;
+}
