@@ -16,3 +16,43 @@
 li {
     list-style: none;
 }
+
+
+.body .about{
+    /* ABOUT */
+position: absolute;
+width: 162px;
+height: 28px;
+}
+
+.about h1{
+    /* Header 1 */
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #565656;
+}
+
+.body .about p{
+    position: absolute;
+    width: 780px;
+    height: 144px;
+}
+
+.about p{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #565656;
+}
+
