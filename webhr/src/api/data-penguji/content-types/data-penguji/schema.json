@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_pengujis",
+  "info": {
+    "singularName": "data-penguji",
+    "pluralName": "data-pengujis",
+    "displayName": "dataPenguji",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nip": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "dataDiri": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pegawai.data-diri"
+    },
+    "grade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::grade.grade",
+      "inversedBy": "data_pengujis"
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jabatan.jabatan",
+      "inversedBy": "data_pengujis"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "data_pengujis"
+    },
+    "data_pesertas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-peserta.data-peserta",
+      "mappedBy": "data_penguji"
+    },
+    "bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bidang.bidang",
+      "inversedBy": "data_pengujis"
+    },
+    "sub_bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-bidang.sub-bidang",
+      "inversedBy": "data_pengujis"
+    },
+    "direktorat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direktorat.direktorat",
+      "inversedBy": "data_pengujis"
+    },
+    "divisi": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::divisi.divisi",
+      "inversedBy": "data_pengujis"
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "data_pengujis"
+    }
+  }
+}

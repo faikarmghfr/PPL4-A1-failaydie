@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_pesertas",
+  "info": {
+    "singularName": "data-peserta",
+    "pluralName": "data-pesertas",
+    "displayName": "dataPeserta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nip": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "dataDiri": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pegawai.data-diri"
+    },
+    "grade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::grade.grade",
+      "inversedBy": "data_pesertas"
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jabatan.jabatan",
+      "inversedBy": "data_pesertas"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "data_pesertas"
+    },
+    "data_penguji": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::data-penguji.data-penguji",
+      "inversedBy": "data_pesertas"
+    },
+    "bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bidang.bidang",
+      "inversedBy": "data_pesertas"
+    },
+    "sub_bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-bidang.sub-bidang",
+      "inversedBy": "data_pesertas"
+    },
+    "direktorat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direktorat.direktorat",
+      "inversedBy": "data_pesertas"
+    },
+    "divisi": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::divisi.divisi",
+      "inversedBy": "data_pesertas"
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "data_pesertas"
+    }
+  }
+}

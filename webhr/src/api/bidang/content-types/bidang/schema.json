@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bidangs",
+  "info": {
+    "singularName": "bidang",
+    "pluralName": "bidangs",
+    "displayName": "bidang"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "data_pengujis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-penguji.data-penguji",
+      "mappedBy": "bidang"
+    },
+    "data_pesertas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-peserta.data-peserta",
+      "mappedBy": "bidang"
+    }
+  }
+}

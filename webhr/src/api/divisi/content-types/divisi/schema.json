@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "divisis",
+  "info": {
+    "singularName": "divisi",
+    "pluralName": "divisis",
+    "displayName": "divisi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "data_pengujis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-penguji.data-penguji",
+      "mappedBy": "divisi"
+    },
+    "data_pesertas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-peserta.data-peserta",
+      "mappedBy": "divisi"
+    }
+  }
+}

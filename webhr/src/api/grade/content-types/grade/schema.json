@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "grades",
+  "info": {
+    "singularName": "grade",
+    "pluralName": "grades",
+    "displayName": "grade",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "data_pengujis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-penguji.data-penguji",
+      "mappedBy": "grade"
+    },
+    "data_pesertas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::data-peserta.data-peserta",
+      "mappedBy": "grade"
+    }
+  }
+}

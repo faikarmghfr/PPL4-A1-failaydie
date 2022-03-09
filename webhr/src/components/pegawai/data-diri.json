@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_pegawai_data_diris",
+  "info": {
+    "displayName": "dataDiri",
+    "icon": "database",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tempat_lahir": {
+      "type": "string"
+    },
+    "tgl_lahir": {
+      "type": "date"
+    },
+    "email": {
+      "type": "email"
+    },
+    "pendidikan": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "religion": {
+      "type": "enumeration",
+      "enum": [
+        "Islam",
+        "Protestan",
+        "Katolik",
+        "Hindu",
+        "Buddha",
+        "Khonghucu"
+      ]
+    },
+    "no_hp": {
+      "type": "string"
+    }
+  }
+}
