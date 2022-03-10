@@ -60,6 +60,14 @@
   object-fit: cover;
 }
 
+.logowebnya {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+
 .menu {
   position: absolute;
   display: inline-block;
@@ -72,6 +80,7 @@
 .Page1 {
   margin-top: 0px;
   height: 713px;
+  width: 1530px;
   background-color: #d7cec7;
 }
 
@@ -158,7 +167,7 @@
   letter-spacing: -0.02em;
 
   margin-top: 136px;
-  margin-left: 665px;
+  margin-left: 680px;
 
   color: #565656;
 }
@@ -177,7 +186,7 @@
   letter-spacing: -0.02em;
 
   margin-top: 203px;
-  margin-left: 365px;
+  margin-left: 380px;
 
   color: #565656;
 }
@@ -208,3 +217,7 @@
   margin-right: 46px;
   margin-left: 50px; */
 }
+ /* .Navigation {
+   margin-left: 163px;
+   margin-top: 19px;
+ } */
