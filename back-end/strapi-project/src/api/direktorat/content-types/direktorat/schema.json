@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "direktorats",
+  "info": {
+    "singularName": "direktorat",
+    "pluralName": "direktorats",
+    "displayName": "Direktorat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama_Direktorat": {
+      "type": "string",
+      "required": true
+    },
+    "divisis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::divisi.divisi",
+      "mappedBy": "direktorat"
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "direktorats"
+    }
+  }
+}

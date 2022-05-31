@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pesertas",
+  "info": {
+    "singularName": "peserta",
+    "pluralName": "pesertas",
+    "displayName": "Peserta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Kode_Peserta": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 6
+    },
+    "pegawais": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pegawai.pegawai",
+      "inversedBy": "pesertas"
+    },
+    "fit_proper": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fit-proper.fit-proper",
+      "inversedBy": "pesertas"
+    }
+  }
+}

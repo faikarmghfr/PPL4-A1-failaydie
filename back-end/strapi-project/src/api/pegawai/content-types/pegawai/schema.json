@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pegawais",
+  "info": {
+    "singularName": "pegawai",
+    "pluralName": "pegawais",
+    "displayName": "Pegawai",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NIP": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 10
+    },
+    "Nama_Pegawai": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "No_Hp": {
+      "type": "string",
+      "maxLength": 13
+    },
+    "Tempat_Lahir": {
+      "type": "enumeration",
+      "enum": [
+        "Bandung",
+        "Bogor",
+        "Cimahi",
+        "Cirebon",
+        "Jakarta",
+        "Tasikmalaya"
+      ],
+      "required": true
+    },
+    "Tanggal_Lahir": {
+      "type": "date",
+      "required": true
+    },
+    "Gender": {
+      "type": "string",
+      "maxLength": 1,
+      "required": true
+    },
+    "Agama": {
+      "type": "enumeration",
+      "enum": [
+        "Islam",
+        "Protestan",
+        "Katolik",
+        "Hindu",
+        "Buddha",
+        "Khonghucu"
+      ],
+      "required": true
+    },
+    "pesertas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::peserta.peserta",
+      "inversedBy": "pegawais"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penguji.penguji",
+      "inversedBy": "pegawais"
+    },
+    "sub_bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-bidang.sub-bidang",
+      "inversedBy": "pegawais"
+    },
+    "grade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::grade.grade",
+      "inversedBy": "pegawais"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "pegawais"
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jabatan.jabatan",
+      "inversedBy": "pegawais"
+    },
+    "pendidikan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pendidikan.pendidikan",
+      "inversedBy": "pegawais"
+    }
+  }
+}

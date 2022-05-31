@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "divisis",
+  "info": {
+    "singularName": "divisi",
+    "pluralName": "divisis",
+    "displayName": "Divisi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama_Divisi": {
+      "type": "string",
+      "required": true
+    },
+    "bidangs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bidang.bidang",
+      "mappedBy": "divisi"
+    },
+    "direktorat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direktorat.direktorat",
+      "inversedBy": "divisis"
+    }
+  }
+}

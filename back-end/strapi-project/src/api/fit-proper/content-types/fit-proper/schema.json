@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fit_propers",
+  "info": {
+    "singularName": "fit-proper",
+    "pluralName": "fit-propers",
+    "displayName": "Fit_Proper",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Jenis_Fit_Proper": {
+      "type": "string",
+      "required": true
+    },
+    "Jadwal_Pengujian": {
+      "type": "date",
+      "required": true
+    },
+    "Proyeksi_Jabatan": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "pesertas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::peserta.peserta",
+      "mappedBy": "fit_proper"
+    }
+  }
+}
