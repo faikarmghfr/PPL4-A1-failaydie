@@ -22,6 +22,12 @@
       "relation": "manyToMany",
       "target": "api::pegawai.pegawai",
       "inversedBy": "pengujis"
+    },
+    "pesertas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::peserta.peserta",
+      "inversedBy": "pengujis"
     }
   }
 }

@@ -68,7 +68,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::peserta.peserta",
-      "inversedBy": "pegawais"
+      "mappedBy": "pegawais"
     },
     "pengujis": {
       "type": "relation",

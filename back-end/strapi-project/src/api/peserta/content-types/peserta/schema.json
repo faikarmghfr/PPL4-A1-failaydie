@@ -4,7 +4,8 @@
   "info": {
     "singularName": "peserta",
     "pluralName": "pesertas",
-    "displayName": "Peserta"
+    "displayName": "Peserta",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::fit-proper.fit-proper",
+      "inversedBy": "pesertas"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penguji.penguji",
       "inversedBy": "pesertas"
     }
   }
