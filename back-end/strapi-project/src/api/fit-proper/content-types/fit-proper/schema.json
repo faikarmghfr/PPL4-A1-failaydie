@@ -30,6 +30,10 @@
       "relation": "oneToMany",
       "target": "api::peserta.peserta",
       "mappedBy": "fit_proper"
+    },
+    "Jenjang_Jabatan": {
+      "type": "string",
+      "required": false
     }
   }
 }
